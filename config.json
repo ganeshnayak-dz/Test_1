@@ -1,0 +1,10 @@
+{
+  "bundle_name": "my-genie-bundle",
+  "resource_key": "my_genie_agent",
+  "title": "My Genie Agent",
+  "space_id": "01f107e5da7910bab209af14ec26b8dc",
+  "warehouse_id": "2eb5285a512501b6",
+  "test_target": true,
+  "test_host": "",
+  "test_warehouse_id": "2eb5285a512501b6"
+}

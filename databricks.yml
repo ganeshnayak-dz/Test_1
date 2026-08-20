@@ -1,0 +1,37 @@
+bundle:
+  name: my-genie-bundle
+  engine: direct
+
+include:
+  - resources/*.yml
+
+variables:
+  warehouse_id:
+    description: SQL warehouse ID for the Genie space
+    default: 2eb5285a512501b6
+
+targets:
+  dev:
+    default: true
+    mode: development
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    resources:
+      genie_spaces:
+        my_genie_agent:
+          title: '[Dev] My Genie Agent'
+          warehouse_id: ${var.warehouse_id}
+          parent_path: /Workspace/Users/${workspace.current_user.userName}
+
+  test:
+    mode: production
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      warehouse_id: 2eb5285a512501b6
+    resources:
+      genie_spaces:
+        my_genie_agent:
+          title: '[Test] My Genie Agent'
+          warehouse_id: ${var.warehouse_id}
+          parent_path: /Workspace/Users/${workspace.current_user.userName}

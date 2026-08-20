@@ -1,0 +1,10 @@
+{
+  "_comment": "One entry per folder to keep in sync. master_src = the LIVE workspace path of the shared/master copy - pulled into repo_path on a best-effort basis, so only whoever has read access to it needs this to succeed; everyone else still gets deployed from whatever is already in repo_path (e.g. from a git pull). repo_path = where that content lives INSIDE this Git repo (relative to this folder) - this is what actually gets committed and pushed to GitHub. dest = the LIVE workspace path repo_path gets deployed to for whoever is currently running the sync. {username} anywhere in master_src or dest is replaced with the current Databricks user (their userName/email) at run time. Using {username} in master_src (as below) is just a generic placeholder - in real use, set master_src to ONE FIXED path (the actual owner's account), so everyone pulls the same shared source; only dest should vary per-user.",
+  "folders": [
+    {
+      "master_src": "/Workspace/Users/{username}/.assistant/skills/marketing-eda-notebook",
+      "repo_path": "shared_folders/marketing-eda-notebook",
+      "dest": "/Workspace/Users/{username}/.assistant/skills/marketing-eda-notebook"
+    }
+  ]
+}
