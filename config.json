@@ -1,10 +1,46 @@
 {
-  "bundle_name": "my-genie-bundle",
-  "resource_key": "my_genie_agent",
-  "title": "My Genie Agent",
+  "bundle_name": "genie-agent",
+  "resource_key": "genie_agent",
+  "title": "genie-agent",
   "space_id": "01f107e5da7910bab209af14ec26b8dc",
   "warehouse_id": "2eb5285a512501b6",
-  "test_target": true,
-  "test_host": "",
-  "test_warehouse_id": "2eb5285a512501b6"
+  "folders": [
+    {
+      "src": "/Workspace/Users/ganesh.nayak@datazymes.com/.assistant/skills/attr-promotional-agent-blueprint",
+      "repo_path": "shared_folders/skills"
+    },
+    {
+      "src": "/Workspace/Users/ganesh.nayak@datazymes.com/.assistant/skills/audit-genie-agent",
+      "repo_path": "shared_folders/skills"
+    },
+    {
+      "src": "/Workspace/Users/ganesh.nayak@datazymes.com/.assistant/skills/load-genie-context",
+      "repo_path": "shared_folders/skills"
+    },
+    {
+      "src": "/Workspace/Users/ganesh.nayak@datazymes.com/Databricks Challenge - Personal",
+      "repo_path": "shared_folders/notebooks"
+    }
+  ],
+  "dev": {
+    "mode": "development",
+    "title": "[Dev] Genie Agent",
+    "permissions": []
+  },
+  "test": {
+    "mode": "production",
+    "workspace_host": "https://dbc-62578fc7-e122.cloud.databricks.com/",
+    "warehouse_id": "7474653114242811",
+    "title": "[Test] Genie Agent",
+    "permissions": [
+      {
+        "user_name": "ganesh.nayak@datazymes.com",
+        "level": "CAN_MANAGE"
+      },
+      {
+        "user_name": "himanshu.kashyap@datazymes.com",
+        "level": "CAN_MANAGE"
+      }
+    ]
+  }
 }

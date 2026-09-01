@@ -1,7 +1,7 @@
 resources:
   genie_spaces:
-    my_genie_agent:
+    genie_agent:
       title: "HEALTH"
       warehouse_id: ${var.warehouse_id}
-      file_path: ../src/my_genie_agent.geniespace.json
+      file_path: ../src/genie_agent.geniespace.json
       parent_path: /Workspace/Users/${workspace.current_user.userName}
